@@ -1,0 +1,103 @@
+{
+  "resources": {
+    "body": [
+      {
+        "type": "style",
+        "src": "./app.css"
+      },
+      {
+        "type": "script",
+        "src": "./fireworks.js"
+      },
+      {
+        "type": "script",
+        "src": "./app.js"
+      }
+    ]
+  },
+  "preview": {
+    "handlers": [
+      {
+        "options": ["*"],
+        "execute": "INSTALL_SCOPE.setOptions(INSTALL_OPTIONS)"
+      }
+    ]
+  },
+  "options": {
+    "properties": {
+      "image": {
+        "order": 1,
+        "title": "Cover Image",
+        "description": "Optionally display an image above your message.",
+        "type": "string",
+        "format": "image",
+        "default": "//eager-app-images.imgix.net/IaYSbxMqTBGYpIrJJzSb_2016.png"
+      },
+      "link": {
+        "order": 2,
+        "title": "Cover Link",
+        "description": "Optionally link the <strong>Cover Image</strong> to a URL of your choice. Relative URLs (e.g. <code class=\"inline\">/about</code>) are supported.",
+        "type": "string",
+        "placeholder": "http://..."
+      },
+      "heading": {
+        "order": 3,
+        "title": "Heading",
+        "type": "string",
+        "default": "Happy New Year!"
+      },
+      "message": {
+        "order": 4,
+        "title": "Message",
+        "description": "You may include links and style the message with Markdown. <a target=\"_blank\" href=\"https://en.wikipedia.org/wiki/Markdown#Example\" class=\"more with-inherited-color\"><strong>Learn more</strong></a>",
+        "type": "string",
+        "format": "markdown",
+        "default": "Everyone here would love to wish you a wonderful and happy New Year.\n\nSome [cool things](https://en.wikipedia.org/wiki/2016#Predicted_and_scheduled_events) are going to happen in 2016, get excited!\n\n— Your Friends"
+      },
+      "theme": {
+        "order": 5,
+        "title": "Theme",
+        "type": "string",
+        "enum": [
+          "light",
+          "dark"
+        ],
+        "enumNames": {
+          "light": "Light",
+          "dark": "Dark"
+        },
+        "default": "light"
+      },
+      "hideBeforeToggle": {
+        "order": 6,
+        "type": "boolean",
+        "title": "Hide the message before a specific date",
+        "default": false
+      },
+      "hideBefore": {
+        "order": 7,
+        "type": "string",
+        "format": "date",
+        "title": "Hide Before",
+        "description": "The message will always be shown in the preview, but it will be hidden to your site’s visitors before this date.",
+        "showIf": "hideBeforeToggle",
+        "default": "30-12-2015"
+      },
+      "hideAfterToggle": {
+        "order": 8,
+        "type": "boolean",
+        "title": "Hide the message after a specific date",
+        "default": true
+      },
+      "hideAfter": {
+        "order": 9,
+        "type": "string",
+        "format": "date",
+        "title": "Hide After",
+        "description": "The message will always be shown in the preview, but it will be hidden to your site’s visitors after this date.",
+        "showIf": "hideAfterToggle",
+        "default": "1-1-2016"
+      }
+    }
+  }
+}
