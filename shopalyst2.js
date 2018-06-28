@@ -3,7 +3,7 @@ var displayOptions = {
     //The CSS selector of the element to embed the widget into. 
     //It is recommended that the container has it's height set to 250px and the width to 100%. 
     //The embed is set to occupy 100% width and height of the parent container.
-    container: '.stacklapopup-products-item' 
+    container: '.shopalyst-wrapper' 
 };
 // Call openBinWidget to display the BIN widget in the specified container
 _shopalyst.openBinWidget('8712561977562', displayOptions);
