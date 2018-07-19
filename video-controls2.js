@@ -8,4 +8,4 @@ $('#play').on('click', function() {
         video.pause();
     }
     return false;
-};
+}
